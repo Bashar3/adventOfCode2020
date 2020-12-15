@@ -38,8 +38,6 @@ combineBothFunctions :: [Int] -> [Int] -> [String] -> [(Int, Int)]
 combineBothFunctions intsC intsR [] = []
 combineBothFunctions intsC intsR (s:ss) = [(last $ continueTranslateColumn intsC (take 7 s) , last $ continueTranslateRow intsR (drop 7 s))] ++ combineBothFunctions intsC intsR ss
 
-zipToColAndRow :: [String] -> [(String, String)]
-zipToColAndRow xs = [(x,x) |x <- xs ]
 
 convertToSeatID :: (Int,Int) -> Int
 convertToSeatID (a,b) = a*8 +b
